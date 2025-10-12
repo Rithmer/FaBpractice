@@ -3,39 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/styles.css">
     <title>Практики</title>
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-    <div class="page-container">
-        <header>Хэдер</header>
-        <nav>
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link active" href="practices.html" aria-current="page">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+    <div class="page">
+        <!-- Шапка -->
+        <header class="header">
+            <h1 class="header__title">Практики</h1>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="news.html">Новости</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="practices.html">Практики</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакты</a>
+                </li>
             </ul>
         </nav>
-        <main class="content">
-            <section class="practices-container">
-                <h2 class="section-title">Практики</h2>
-                <article class="practice-card card">
-                    <h3 class="practice-title">Практика 1</h3>
-                    <p class="practice-desc">Описание практики 1.</p>
+
+        <!-- Основной контент -->
+        <main class="main">
+            <section class="practices">
+                <h2 class="section-title">Список практик</h2>
+
+                <article class="project-card">
+                    <h3 class="project-card__title">Практика 1</h3>
+                    <p class="project-card__desc">Описание практики 1.</p>
                 </article>
-                <article class="practice-card card">
-                    <h3 class="practice-title">Практика 2</h3>
-                    <p class="practice-desc">Описание практики 2.</p>
+
+                <article class="project-card">
+                    <h3 class="project-card__title">Практика 2</h3>
+                    <p class="project-card__desc">Описание практики 2.</p>
                 </article>
-                <article class="practice-card card">
-                    <h3 class="practice-title">Практика 3</h3>
-                    <p class="practice-desc">Описание практики 3.</p>
+
+                <article class="project-card">
+                    <h3 class="project-card__title">Практика 3</h3>
+                    <p class="project-card__desc">Описание практики 3.</p>
                 </article>
             </section>
         </main>
-        <footer>Футер</footer>
+
+        <!-- Футер -->
+        <footer class="footer">
+            © 2025 Константинов Илья
+        </footer>
     </div>
 </body>
 </html>
