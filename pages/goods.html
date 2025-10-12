@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Товары</title>
-    </head>
-    <body>
-        <div id="header">Хэдер</div>
-        <div id="menu">
-            <ul>
-                <li><a href="../index.html">Главная</a></li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="practices.html">Практики</a></li>
-                <li><a href="goods.html">Товары</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары</title>
+    <link rel="stylesheet" href="../style/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">Хэдер</div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
         </div>
-        <div id="content">
-            <p>Товар 1</p>
-            <img src="../images/goods1.png" alt="Товар 1" width="300" height="250">
-            <p>Цена товара 1</p>
-
-            <p>Товар 2</p>
-            <img src="../images/goods2.png" alt="Товар 2" width="300" height="250">
-            <p>Цена товара 2</p>
-
-            <p>Товар 3</p>
-            <img src="../images/goods3.png" alt="Товар 3" width="300" height="250">
-            <p>Цена товара 3</p>
+        <div class="content">
+            <h2 class="section-title">Товары</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img class="product-image" src="../images/goods1.png" alt="Товар 1">
+                    <p class="product-name">Товар 1</p>
+                    <p class="product-price">Цена: 70000 руб.</p>
+                </div>
+                <div class="product-card">
+                    <img class="product-image" src="../images/goods2.png" alt="Товар 2">
+                    <p class="product-name">Товар 2</p>
+                    <p class="product-price">Цена: 12500 руб.</p>
+                </div>
+                <div class="product-card">
+                    <img class="product-image" src="../images/goods3.png" alt="Товар 3">
+                    <p class="product-name">Товар 3</p>
+                    <p class="product-price">Цена: 35000 руб.</p>
+                </div>
+            </div>
         </div>
-        <div id="footer">Футер</div>
-    </body>
+        <div class="footer">Футер</div>
+    </div>
+</body>
 </html>
