@@ -8,29 +8,31 @@
 </head>
 <body>
     <div class="page-container">
-        <div class="header">Хэдер</div>
-        <div class="nav">
+        <header>Хэдер</header>
+        <nav>
             <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
                 <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
                 <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contacts.html" aria-current="page">Контакты</a></li>
             </ul>
-        </div>
+        </nav>
         <main class="content contacts-container">
             <h2 class="section-title">Контакты</h2>
-            <div class="contact-info">
-                <div class="contact-card">
-                    <p>Электронная почта: <strong>halfevenw@gmail.com</strong></p>
-                </div>
-                <div class="contact-card">
-                    <p>Адрес: г. Москва, ул. Пущина, д. Котолушкина</p>
-                </div>
-            </div>
+            <section class="contact-info">
+                <article class="contact-block">
+                    <h3 class="contact-block-title">Электронная почта</h3>
+                    <p><strong>halfevenw@gmail.com</strong></p>
+                </article>
+                <article class="contact-block">
+                    <h3 class="contact-block-title">Адрес</h3>
+                    <p>г. Москва, ул. Пущина, д. Котолушкина</p>
+                </article>
+            </section>
             <button class="contact-button">Позвоните мне</button>
         </main>
-        <div class="footer">Футер</div>
+        <footer>Футер</footer>
     </div>
 </body>
 </html>
