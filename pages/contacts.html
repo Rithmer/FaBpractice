@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/styles.css">
     <title>Контакты</title>
+    <link rel="stylesheet" href="../style/styles.css">
+    <script src="../contacts.js" defer></script>
 </head>
 <body>
     <div class="page-container">
@@ -30,9 +31,99 @@
                     <p>г. Москва, ул. Пущина, д. Котолушкина</p>
                 </article>
             </section>
-            <button class="contact-button">Позвоните мне</button>
+            <button class="contact-button" id="openDialog">Связаться с нами</button>
         </main>
         <footer>Футер</footer>
+        <dialog id="contactModal" aria-labelledby="dialogTitle">
+            <div class="modal-header">
+                <h2 id="dialogTitle">Форма обратной связи</h2>
+            </div>
+            <div class="modal-content">
+                <form id="contactForm" method="dialog" novalidate>
+                    <div class="form-group">
+                        <label for="name">Имя <span class="required">*</span></label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            minlength="2"
+                            autocomplete="given-name"
+                            aria-describedby="nameHelp"
+                            aria-invalid="false"
+                            placeholder="Введите ваше имя"
+                        >
+                        <small id="nameHelp">Введите не менее 2 символов</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон <span class="required">*</span></label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            required
+                            inputmode="tel"
+                            autocomplete="tel"
+                            aria-describedby="phoneHelp"
+                            aria-invalid="false"
+                            placeholder="+79991234567"
+                            pattern="^\+7\d{10}$"
+                        >
+                        <small id="phoneHelp">Введите номер слитно, например +79991234567</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Электронная почта <span class="required">*</span></label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            autocomplete="email"
+                            aria-describedby="emailHelp"
+                            aria-invalid="false"
+                            placeholder="example@mail.ru"
+                        >
+                        <small id="emailHelp">Пример: example@mail.ru</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Категория обращения <span class="required">*</span></label>
+                        <select
+                            id="category"
+                            name="category"
+                            required
+                            aria-describedby="categoryHelp"
+                            aria-invalid="false"
+                        >
+                            <option value="">Выберите категорию</option>
+                            <option value="technical">Техническая поддержка</option>
+                            <option value="commercial">Коммерческое предложение</option>
+                            <option value="cooperation">Сотрудничество</option>
+                            <option value="complaint">Жалоба</option>
+                            <option value="suggestion">Предложение</option>
+                            <option value="other">Другое</option>
+                        </select>
+                        <small id="categoryHelp">Укажите причину обращения</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Текст обращения <span class="required">*</span></label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            required
+                            maxlength="500"
+                            aria-describedby="messageHelp"
+                            aria-invalid="false"
+                            placeholder="Опишите вашу проблему или вопрос..."
+                        ></textarea>
+                        <small id="messageHelp">Опишите ваш запрос (до 500 символов)</small>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" id="closeDialog" class="btn btn-secondary">Отмена</button>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </dialog>
     </div>
 </body>
 </html>

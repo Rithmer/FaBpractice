@@ -6,6 +6,7 @@
     --color-secondary: #2c3e50;
     --color-accent: #3498db;
     --color-price: #eb7927;
+    --color-required: #eb2727;
     --color-muted: #7f8c8d;
     --color-gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --color-gradient-secondary: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
@@ -239,7 +240,7 @@ main.content {
     margin-bottom: var(--space-3);
 }
 
-/* Карточка с фиксированной высотой под масштабирование */
+
 .product-card {
     background: var(--color-bg);
     padding: var(--space-2);
@@ -321,6 +322,159 @@ main.content {
 .contact-button:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-3);
+}
+
+/* ===== МОДАЛЬНОЕ ОКНО ===== */
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s ease;
+}
+
+dialog {
+    border: none;
+    border-radius: var(--radius-3);
+    padding: 0;
+    box-shadow: var(--shadow-3);
+    animation: slideIn 0.3s ease;
+    max-width: 500px;
+    width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--color-bg);
+}
+
+.modal-header {
+    background: var(--color-gradient-secondary);
+    color: var(--color-bg);
+    padding: var(--space-4);
+    border-radius: var(--radius-3) var(--radius-3) 0 0;
+    margin: 0;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.modal-content {
+    padding: var(--space-4);
+}
+
+.form-group {
+    margin-bottom: var(--space-3);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-1);
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: var(--space-2);
+    border: 2px solid var(--color-bg-light);
+    border-radius: var(--radius-2);
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-4);
+}
+
+.form-group input.invalid,
+.form-group select.invalid,
+.form-group textarea.invalid {
+    border-color: var(--color-required);
+}
+
+.form-group input.invalid:focus,
+.form-group select.invalid:focus,
+.form-group textarea.invalid:focus {
+    border-color: var(--color-required);
+    box-shadow: 0 0 5px var(--color-required);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group small {
+    display: block;
+    margin-top: var(--space-1);
+    color: var(--color-muted);
+    font-size: 14px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: var(--space-2);
+    justify-content: flex-end;
+    margin-top: var(--space-4);
+}
+
+.btn {
+    padding: var(--space-2) var(--space-4);
+    border: none;
+    border-radius: var(--radius-2);
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-primary {
+    background: var(--color-gradient-primary);
+    color: var(--color-bg);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+    background: var(--color-bg-light);
+    color: var(--color-secondary);
+    border: 2px solid var(--color-bg-light);
+}
+
+.btn-secondary:hover {
+    background: var(--color-bg);
+    box-shadow: var(--shadow-1);
+}
+
+.required {
+    color: var(--color-required);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 /* ===== ФУТЕР ===== */
