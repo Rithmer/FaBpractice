@@ -145,7 +145,7 @@ body.theme-dark .footer {
   top: var(--space-2);
   right: var(--space-2);
   transition: all 0.3s ease;
-  color: var(--color-bg); /* по умолчанию — для светлой темы */
+  color: var(--color-bg);
 }
 
 /* hover эффект */
@@ -165,13 +165,13 @@ body.theme-dark .theme-toggle:hover {
 }
 
 body.theme-dark dialog {
-  background: var(--color-bg-light); /* такой же фон, как на сайте */
+  background: var(--color-bg-light);
   color: var(--color-fg);
   box-shadow: var(--shadow-3);
 }
 
 body.theme-dark .modal-header {
-  background: var(--color-gradient-secondary); /* как у хедера */
+  background: var(--color-gradient-secondary);
   color: var(--color-fg);
 }
 
@@ -192,7 +192,7 @@ body.theme-dark .modal-header {
   color: var(--color-bg);
   padding: var(--space-5);
   text-align: center;
-  position: relative; /* Для абсолютного позиционирования кнопки */
+  position: relative;
 }
 
 .header__title {
@@ -221,7 +221,12 @@ body.theme-dark .modal-header {
   font-weight: 700;
 }
 
+.nav__item {
+  margin: 0;
+}
+
 .nav__link {
+  text-align: justify;
   text-decoration: none;
   color: var(--color-bg);
   padding: var(--space-1) var(--space-4);
@@ -251,8 +256,8 @@ body.theme-dark .modal-header {
 
 .profile__photo {
   width: 220px;
-  height: 280px;
-  border-radius: var(--radius-4);
+  height: 220px;
+  border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--color-primary);
   margin: var(--space-3) auto;
@@ -326,7 +331,10 @@ body.theme-dark .modal-header {
 }
 .skill--js {
   background: #f0db4f;
-  color: var(--color-secondary);
+}
+
+.skill--react {
+  background: #61DBFB;
 }
 
 /* ===== КАРТОЧКИ ОПЫТА ===== */
@@ -337,11 +345,13 @@ body.theme-dark .modal-header {
   border-radius: var(--radius-3);
   box-shadow: var(--shadow-2);
   border-left: 4px solid var(--color-primary);
-  transition: transform 0.3s ease;
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .experience__card:hover {
-  transform: translateX(5px);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-3);
 }
 
 .experience__title {
