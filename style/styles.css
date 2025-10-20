@@ -334,7 +334,7 @@ body.theme-dark .modal-header {
 }
 
 .skill--react {
-  background: #61DBFB;
+  background: #61dbfb;
 }
 
 /* ===== КАРТОЧКИ ОПЫТА ===== */
@@ -392,6 +392,16 @@ body.theme-dark .modal-header {
 .project-card__desc {
   color: var(--color-muted);
   line-height: 1.6;
+}
+
+.practices__image {
+  height: 200px;
+  max-width: 350px;
+  border-radius: var(--radius-2);
+  margin: 0 auto var(--space-2);
+  box-shadow: var(--shadow-1);
+  display: block;
+  object-fit: cover;
 }
 
 /* ===== КАРТОЧКИ ТОВАРОВ ===== */
