@@ -699,6 +699,10 @@ dialog::backdrop {
   box-shadow: var(--shadow-2);
 }
 
+.leaflet-control-attribution {
+  display: none;
+}
+
 /* ===== АДАПТИВ ===== */
 @media (max-width: 1024px) {
   .hero {
