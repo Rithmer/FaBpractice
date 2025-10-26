@@ -701,7 +701,6 @@ dialog::backdrop {
 
 /* ===== АДАПТИВ ===== */
 @media (max-width: 1024px) {
-  /* Hero */
   .hero {
     padding: var(--space-6) var(--space-2);
   }
@@ -716,7 +715,6 @@ dialog::backdrop {
     font-size: 15px;
   }
 
-  /* Side-nav */
   .side-nav {
     width: 60px;
     gap: 20px;
@@ -730,18 +728,15 @@ dialog::backdrop {
     height: 24px;
   }
 
-  /* Content */
   .content {
     margin: var(--space-4) auto;
     padding: 0 var(--space-2);
   }
 
-  /* Skills */
   .skills__item {
     padding: var(--space-2) var(--space-3);
   }
 
-  /* Projects */
   .projects__grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
@@ -749,7 +744,6 @@ dialog::backdrop {
     padding: var(--space-3);
   }
 
-  /* Portfolio */
   .portfolio-header {
     flex-direction: column;
     gap: var(--space-3);
@@ -765,7 +759,6 @@ dialog::backdrop {
     padding: var(--space-3);
   }
 
-  /* Contacts */
   .contacts__container {
     grid-template-columns: 1fr;
     min-height: auto;
@@ -785,7 +778,6 @@ dialog::backdrop {
     height: 400px;
   }
 
-  /* Modal */
   dialog {
     max-width: 400px;
     padding: var(--space-3);
@@ -793,12 +785,10 @@ dialog::backdrop {
 }
 
 @media (max-width: 768px) {
-  /* Body */
   body {
-    padding-bottom: 60px; /* Чтобы контент не налезал на bottom-nav */
+    padding-bottom: 60px;
   }
 
-  /* Hero */
   .hero {
     padding: var(--space-5) var(--space-2);
   }
@@ -813,7 +803,6 @@ dialog::backdrop {
     font-size: 14px;
   }
 
-  /* Side-nav to bottom-nav */
   .side-nav {
     position: fixed;
     top: auto;
@@ -838,13 +827,11 @@ dialog::backdrop {
     height: 24px;
   }
 
-  /* Content */
   .content {
     margin: var(--space-3) auto;
     padding: 0 var(--space-2);
   }
 
-  /* About, Skills, Projects */
   .about,
   .skills,
   .projects {
@@ -868,7 +855,6 @@ dialog::backdrop {
     gap: var(--space-3);
   }
 
-  /* Portfolio */
   .portfolio-header__title {
     font-size: 26px;
   }
@@ -882,7 +868,6 @@ dialog::backdrop {
     font-size: 15px;
   }
 
-  /* Contacts */
   .contacts__container {
     grid-template-columns: 1fr;
     gap: var(--space-4);
@@ -900,13 +885,11 @@ dialog::backdrop {
     height: 300px;
   }
 
-  /* Footer */
   .footer {
     padding: var(--space-3);
     font-size: 13px;
   }
 
-  /* Theme-toggle */
   .theme-toggle {
     bottom: 70px;
     right: var(--space-2);
@@ -918,7 +901,6 @@ dialog::backdrop {
     height: 24px;
   }
 
-  /* Modal */
   dialog {
     max-width: 350px;
     padding: var(--space-3);
@@ -941,7 +923,6 @@ dialog::backdrop {
 }
 
 @media (max-width: 480px) {
-  /* Hero */
   .hero {
     padding: var(--space-4) var(--space-1);
   }
@@ -956,7 +937,6 @@ dialog::backdrop {
     font-size: 14px;
   }
 
-  /* Side-nav */
   .side-nav {
     height: 50px;
   }
@@ -969,13 +949,11 @@ dialog::backdrop {
     height: 20px;
   }
 
-  /* Content */
   .content {
     margin: var(--space-3) auto;
     padding: 0 var(--space-1);
   }
 
-  /* About */
   .about {
     padding: var(--space-3);
   }
@@ -986,7 +964,6 @@ dialog::backdrop {
     font-size: 14px;
   }
 
-  /* Skills */
   .skills__list {
     flex-direction: column;
     gap: var(--space-1);
@@ -999,7 +976,6 @@ dialog::backdrop {
     font-size: 14px;
   }
 
-  /* Projects */
   .projects__title {
     font-size: 20px;
   }
@@ -1011,7 +987,6 @@ dialog::backdrop {
     padding: var(--space-2);
   }
 
-  /* Portfolio */
   .portfolio-header__title {
     font-size: 24px;
   }
@@ -1029,7 +1004,6 @@ dialog::backdrop {
     font-size: 14px;
   }
 
-  /* Contacts */
   .contacts__title {
     font-size: 20px;
   }
@@ -1043,13 +1017,11 @@ dialog::backdrop {
     height: 250px;
   }
 
-  /* Footer */
   .footer {
     padding: var(--space-3);
     font-size: 12px;
   }
 
-  /* Theme-toggle */
   .theme-toggle {
     width: 40px;
     height: 40px;
@@ -1061,7 +1033,6 @@ dialog::backdrop {
     height: 20px;
   }
 
-  /* Modal */
   dialog {
     max-width: 300px;
     padding: var(--space-2);
