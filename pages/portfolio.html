@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио | Илья Константинов</title>
+  <link rel="stylesheet" href="../style/styles.css" />
+  <script src="../main.js" defer></script>
+</head>
+<body>
+  <header class="portfolio-header">
+    <nav class="side-nav">
+      <a href="../index.html" class="side-nav__link" title="Главная">
+        <svg viewBox="0 0 24 24">
+          <path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" />
+        </svg>
+      </a>
+      <a href="../pages/portfolio.html" class="side-nav__link active" title="Портфолио">
+        <svg viewBox="0 0 24 24">
+          <path d="M13 14v6c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1m-9 7h6c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1M3 4v6c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1m12.95-1.6L11.7 6.64c-.39.39-.39 1.02 0 1.41l4.25 4.25c.39.39 1.02.39 1.41 0l4.25-4.25c.39-.39.39-1.02 0-1.41L17.37 2.4c-.39-.39-1.03-.39-1.42 0z" />
+        </svg>
+      </a>
+      <a href="../pages/skills.html" class="side-nav__link" title="Навыки">
+        <svg viewBox="0 0 24 24">
+          <path d="M12.09 2.91C10.08.9 7.07.49 4.65 1.67L8.28 5.3c.39.39.39 1.02 0 1.41L6.69 8.3c-.39.4-1.02.4-1.41 0L1.65 4.67C.48 7.1.89 10.09 2.9 12.1c1.86 1.86 4.58 2.35 6.89 1.48l7.96 7.96c1.03 1.03 2.69 1.03 3.71 0 1.03-1.03 1.03-2.69 0-3.71L13.54 9.9c.92-2.34.44-5.1-1.45-6.99z" />
+        </svg>
+      </a>
+      <a href="../pages/contacts.html" class="side-nav__link" title="Контакты">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m-.4 4.25-6.54 4.09c-.65.41-1.47.41-2.12 0L4.4 8.25c-.25-.16-.4-.43-.4-.72 0-.67.73-1.07 1.3-.72L12 11l6.7-4.19c.57-.35 1.3.05 1.3.72 0 .29-.15.56-.4.72z" />
+        </svg>
+      </a>
+    </nav>
+    <h1 class="portfolio-header__title">Мои проекты</h1>
+  </header>
+
+  <main class="portfolio-content">
+    <section class="portfolio-content__project-detail">
+      <div class="project-detail__card">
+        <h2 class="project-detail__card-title">Портфолио</h2>
+        <p class="project-detail__card-text">
+          Мой основной сайт, демонстрирующий навыки веб-разработки и дизайн.
+        </p>
+        <a href="#" target="_blank" class="project-detail__card-link">Посмотреть проект</a>
+      </div>
+      <div class="project-detail__card">
+        <h2 class="project-detail__card-title">Калькулятор на JS</h2>
+        <p class="project-detail__card-text">
+          Интерактивный калькулятор с красивым UI и простой логикой на JavaScript.
+        </p>
+        <a href="#" target="_blank" class="project-detail__card-link">Посмотреть проект</a>
+      </div>
+      <div class="project-detail__card">
+        <h2 class="project-detail__card-title">Пет-проект на Bootstrap</h2>
+        <p class="project-detail__card-text">
+          Сайт, созданный в рамках практической работы во время обучения в вузе.
+        </p>
+        <a href="https://github.com/Rithmer/BootstrapPractice" target="_blank" class="project-detail__card-link">
+          Посмотреть проект
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© 2025 Илья Константинов | Сделано с ❤️</footer>
+
+  <button class="theme-toggle" id="theme-toggle">
+    <img src="../images/icons/theme-switch.svg" alt="Сменить тему" class="theme-toggle__icon" />
+  </button>
+</body>
+</html>

@@ -15,3 +15,29 @@ btn?.addEventListener("click", () => {
   btn.setAttribute("aria-pressed", String(isDark));
   localStorage.setItem(KEY, isDark ? "dark" : "light");
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.querySelector(".loader");
+
+  if (sessionStorage.getItem("loaderShown")) {
+    loader.style.display = "none";
+  } else {
+    sessionStorage.setItem("loaderShown", "true");
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 3000);
+  }
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".side-nav__link");
+  const current = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    if (link.getAttribute("href").includes(current)) {
+      link.classList.add("active");
+    }
+  });
+});
+
