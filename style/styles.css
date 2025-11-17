@@ -2,7 +2,7 @@
 :root {
   --color-bg: #f4f6ff;
   --color-bg-light: #ffffff;
-  --color-button:#bb4747;
+  --color-button: #bb4747;
   --color-fg: #0a0d4b;
   --color-muted: #6b6c74;
   --color-primary: #282c34;
@@ -35,7 +35,7 @@
 body.theme-dark {
   --color-bg: #1e1f24;
   --color-bg-light: #2b2d36;
-  --color-button:#bb4747;
+  --color-button: #bb4747;
   --color-fg: #f4f4f6;
   --color-muted: #9ca1b5;
   --color-primary: #8fa4ff;
@@ -196,7 +196,7 @@ body {
 }
 
 .hero__title {
-  font-size: 42px;
+  font-size: clamp(36px, 5vw, 50px);
   color: var(--color-primary);
   font-weight: 600;
   margin-bottom: var(--space-2);
@@ -206,7 +206,7 @@ body {
 }
 
 .hero__subtitle {
-  font-size: 20px;
+  font-size: clamp(18px, 2vw, 24px);
   color: var(--color-muted);
   margin-bottom: var(--space-4);
   opacity: 0;
@@ -221,7 +221,7 @@ body {
   padding: var(--space-2) var(--space-5);
   border-radius: var(--radius-4);
   cursor: pointer;
-  font-size: 16px;
+  font-size: clamp(16px, 1.5vw, 18px);
   font-weight: 500;
   opacity: 0;
   animation: fadeUp 1s ease forwards;
@@ -256,11 +256,13 @@ body {
 }
 
 .about__title {
+  font-size: clamp(24px, 2.5vw, 32px);
   color: var(--color-primary);
   margin-bottom: var(--space-2);
 }
 
 .about__text {
+  font-size: clamp(16px, 1.5vw, 20px);
   color: var(--color-secondary);
   line-height: 1.8;
 }
@@ -275,6 +277,7 @@ body {
 }
 
 .skills__title {
+  font-size: clamp(24px, 2.5vw, 30px);
   color: var(--color-primary);
   margin-bottom: var(--space-3);
 }
@@ -308,6 +311,7 @@ body {
 }
 
 .projects__title {
+  font-size: clamp(24px, 2.5vw, 30px);
   color: var(--color-primary);
   margin-bottom: var(--space-3);
 }
@@ -430,7 +434,6 @@ body {
   box-shadow: var(--shadow-2);
   text-align: center;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-
   overflow: hidden;
   opacity: 0;
   transform: translateY(25px);
@@ -467,12 +470,13 @@ body {
 }
 
 .project-detail__card-title {
+  font-size: clamp(22px, 2vw, 26px);
   color: var(--color-primary);
   margin-bottom: var(--space-2);
-  font-size: 22px;
 }
 
 .project-detail__card-text {
+  font-size: clamp(16px, 1.5vw, 18px);
   color: var(--color-muted);
   line-height: 1.6;
   margin-bottom: var(--space-3);
@@ -644,9 +648,9 @@ dialog::backdrop {
 }
 
 fieldset {
-  border: none;       /* убирает рамку */
-  margin: 0;          /* сброс отступов */
-  padding: 0;         /* сброс внутренних отступов */
+  border: none; /* убирает рамку */
+  margin: 0; /* сброс отступов */
+  padding: 0; /* сброс внутренних отступов */
 }
 
 .modal-description {
@@ -751,16 +755,16 @@ fieldset {
 }
 
 .contacts__title {
+  font-size: clamp(24px, 2vw, 28px);
   color: var(--color-primary);
-  font-size: 24px;
   margin-bottom: var(--space-3);
   display: block;
   width: 100%;
 }
 
 .contacts__text {
+  font-size: clamp(16px, 1.5vw, 18px);
   color: var(--color-secondary);
-  font-size: 18px;
   margin-bottom: var(--space-2);
   display: block;
   width: 100%;
@@ -828,7 +832,7 @@ fieldset {
   }
 
   .skills__item {
-    padding: var(--space-2) var(--space-3);
+    padding: var(--space-2) var(--space-4);
   }
 
   .projects__grid {
@@ -998,8 +1002,8 @@ fieldset {
   }
 
   .footer {
+    font-size: clamp(14px, 1vw, 16px);
     padding: var(--space-3);
-    font-size: 13px;
   }
 
   .theme-toggle {
@@ -1076,10 +1080,10 @@ fieldset {
     padding: var(--space-3);
   }
   .about__title {
-    font-size: 20px;
+    font-size: clamp(20px, 2vw, 28px);
   }
   .about__text {
-    font-size: 14px;
+    font-size: clamp(14px, 1.2vw, 18px);
   }
 
   .skills__list {
