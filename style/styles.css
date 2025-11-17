@@ -2,6 +2,7 @@
 :root {
   --color-bg: #f4f6ff;
   --color-bg-light: #ffffff;
+  --color-button:#bb4747;
   --color-fg: #0a0d4b;
   --color-muted: #6b6c74;
   --color-primary: #282c34;
@@ -34,6 +35,7 @@
 body.theme-dark {
   --color-bg: #1e1f24;
   --color-bg-light: #2b2d36;
+  --color-button:#bb4747;
   --color-fg: #f4f4f6;
   --color-muted: #9ca1b5;
   --color-primary: #8fa4ff;
@@ -189,7 +191,6 @@ body {
   text-align: center;
   padding: var(--space-7) var(--space-3);
   background: var(--color-bg);
-  border-radius: 0 0 var(--radius-5) var(--radius-5);
   box-shadow: var(--shadow-1);
   transition: background 0.5s ease;
 }
@@ -340,7 +341,9 @@ body {
   flex-direction: column;
   align-items: center;
   max-width: 900px;
-  margin: var(--space-6) auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--space-6);
   padding: 0 var(--space-3);
   gap: var(--space-3);
   text-align: center;
@@ -371,13 +374,52 @@ body {
   flex: 1;
   max-width: 1000px;
   margin: var(--space-5) auto;
-  padding: 0 var(--space-3);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.responsive-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-detail__card picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius-5);
+  margin-bottom: var(--space-4);
 }
 
 .portfolio-content__project-detail {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-7);
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-1);
+}
+
+.gallery__item img {
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery__item img:hover {
+  transform: scale(1.05);
 }
 
 /* ===== КАРТОЧКИ ПРОЕКТОВ ===== */
@@ -388,7 +430,7 @@ body {
   box-shadow: var(--shadow-2);
   text-align: center;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  position: relative;
+
   overflow: hidden;
   opacity: 0;
   transform: translateY(25px);
@@ -405,6 +447,21 @@ body {
 }
 
 .project-detail__card:nth-child(3) {
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.project-detail__card:nth-child(4) {
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.project-detail__card:nth-child(5) {
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.project-detail__card:nth-child(6) {
   animation: fadeUp 0.8s ease forwards;
   animation-delay: 0.6s;
 }
@@ -508,6 +565,22 @@ body {
   transition: background 0.4s ease;
 }
 
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.side-nav li {
+  margin: 0;
+  padding: 0;
+}
+
 .side-nav__link {
   width: 50px;
   height: 50px;
@@ -570,6 +643,16 @@ dialog::backdrop {
   flex-direction: column;
 }
 
+fieldset {
+  border: none;       /* убирает рамку */
+  margin: 0;          /* сброс отступов */
+  padding: 0;         /* сброс внутренних отступов */
+}
+
+.modal-description {
+  color: var(--color-secondary);
+}
+
 .form-group {
   margin-bottom: var(--space-3);
 }
@@ -624,7 +707,7 @@ dialog::backdrop {
 }
 
 .modal-actions button[type="button"] {
-  background: var(--color-muted);
+  background: var(--color-button);
   color: var(--color-bg-light);
 }
 
@@ -671,12 +754,16 @@ dialog::backdrop {
   color: var(--color-primary);
   font-size: 24px;
   margin-bottom: var(--space-3);
+  display: block;
+  width: 100%;
 }
 
 .contacts__text {
   color: var(--color-secondary);
   font-size: 18px;
   margin-bottom: var(--space-2);
+  display: block;
+  width: 100%;
 }
 
 .contacts__details {
@@ -723,6 +810,9 @@ dialog::backdrop {
     width: 60px;
     gap: 20px;
   }
+  .nav-list {
+    flex-direction: column;
+  }
   .side-nav__link {
     width: 40px;
     height: 40px;
@@ -746,6 +836,9 @@ dialog::backdrop {
   }
   .project-card__container {
     padding: var(--space-3);
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .portfolio-header {
@@ -790,11 +883,12 @@ dialog::backdrop {
 
 @media (max-width: 768px) {
   body {
-    padding-bottom: 60px;
+    padding-bottom: 50px;
   }
 
   .hero {
     padding: var(--space-5) var(--space-2);
+    margin-top: 60px;
   }
   .hero__title {
     font-size: 28px;
@@ -820,6 +914,13 @@ dialog::backdrop {
     gap: 0;
     box-shadow: var(--shadow-2);
     z-index: 1000;
+  }
+  .nav-list {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    align-items: center;
   }
   .side-nav__link {
     width: 50px;
@@ -859,6 +960,11 @@ dialog::backdrop {
     gap: var(--space-3);
   }
 
+  .portfolio-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .portfolio-header__title {
     font-size: 26px;
   }
@@ -871,7 +977,9 @@ dialog::backdrop {
   .project-detail__card-text {
     font-size: 15px;
   }
-
+  .gallery {
+    grid-template-columns: 1fr;
+  }
   .contacts__container {
     grid-template-columns: 1fr;
     gap: var(--space-4);
@@ -895,8 +1003,9 @@ dialog::backdrop {
   }
 
   .theme-toggle {
-    bottom: 70px;
-    right: var(--space-2);
+    position: absolute;
+    top: var(--space-2);
+    left: var(--space-3);
     width: 45px;
     height: 45px;
   }
@@ -929,6 +1038,7 @@ dialog::backdrop {
 @media (max-width: 480px) {
   .hero {
     padding: var(--space-4) var(--space-1);
+    margin-top: 60px;
   }
   .hero__title {
     font-size: 24px;
@@ -943,6 +1053,10 @@ dialog::backdrop {
 
   .side-nav {
     height: 50px;
+  }
+  .nav-list {
+    height: 60px;
+    padding: 0 var(--space-2);
   }
   .side-nav__link {
     width: 40px;
@@ -991,6 +1105,11 @@ dialog::backdrop {
     padding: var(--space-2);
   }
 
+  .portfolio-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .portfolio-header__title {
     font-size: 24px;
   }
@@ -1029,8 +1148,8 @@ dialog::backdrop {
   .theme-toggle {
     width: 40px;
     height: 40px;
-    bottom: 70px;
-    right: var(--space-2);
+    top: var(--space-2);
+    left: var(--space-1);
   }
   .theme-toggle__icon {
     width: 20px;
